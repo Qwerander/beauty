@@ -1,0 +1,18 @@
+@mixin effect {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &:focus {
+        color: var(--green-light)
+    }
+    &:hover {
+        color: var(--green-dark)
+    }
+}
+
+@mixin effectBtn {
+    &:hover {
+        background-color: var(--grey);
+    } 
+    &:active {
+        background-color: var(--dark);
+    }
+}

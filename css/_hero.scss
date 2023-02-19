@@ -1,0 +1,81 @@
+.hero {
+    background-color: var(--green);
+
+    &__container {
+        background-image: url('../img/hero-armchair.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: auto;
+    }
+
+    &__content {
+        padding: 192px 0;
+        max-width: 308px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: var(--white);
+    }
+
+    &__descr {
+        margin: 0;
+        margin-bottom: 50px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--white);
+    }
+
+    &__btn {
+        padding: 12px 26px;
+        border: 2px solid #FFFFFF;
+        border-radius: 40px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        background-color: var(--green);
+        color: var(--white);
+        @include effect;
+        @include effectBtn;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+            &__container {
+                // background-position: center center;
+                background-size: contain;
+            }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        &__content {
+            padding: 80px 0;
+        }
+ 
+    }
+}
+
+@media (max-width: 460px) {
+    .hero {
+    
+        &__content {
+            padding: 42px 0;
+        }
+
+        &__title {
+            font-size: 42px;
+        }
+
+
+    }
+}

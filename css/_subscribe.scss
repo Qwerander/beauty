@@ -1,0 +1,104 @@
+@import './mixins';
+
+.subscribe {
+    padding-bottom: 132px;
+    background-color: var(--grey);
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__block {
+        padding: 35px 40px 35px 40px;
+        width: calc((100% - 30px) / 2);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--green);
+    }
+
+    &__wrapper {
+        padding-right: 210px;
+        background-image: url('../img/post.svg');
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: var(--white);
+    }
+
+    &__descr {
+        margin: 0;
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--white);
+    }
+
+    &__input {
+        padding: 9px 25px;
+        border: none;
+        border-radius: 30px;
+        max-width: 225px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--black);
+        outline: none;
+        background-color: var(--white);
+
+        &::placeholder {
+            color: var(--grey);
+        }
+    }
+
+    &__map {
+        padding: 9px 28px;
+        border: 2px solid var(--white);
+        border-radius: 30px;
+        align-self: flex-start;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        background-color: var(--green);
+        color: var(--white);
+        @include effect;
+        @include effectBtn;
+    }
+}
+
+@media (max-width: 992px) {
+    .subscribe {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__block {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .subscribe {
+        &__wrapper {
+            padding-right: 0;
+            background-image: none;
+        }
+    }
+}

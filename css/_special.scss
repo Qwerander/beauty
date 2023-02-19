@@ -1,0 +1,103 @@
+@import './mixins.scss';
+
+.special {
+    padding: 70px 0 100px;
+    background-color: var(--grey);
+
+    &__top {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: var(--black);
+    }
+
+    &__main {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: repeat(4, calc((100% - 90px)/ 4));
+        gap: 30px;
+    }
+
+    &__card {
+        padding: 25px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+
+        img {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__dscr {
+        margin: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--dark);
+    }
+
+    &__price {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: var(--black);
+    }
+
+    &__btn {
+        padding: 9px 40px;
+        border-radius: 30px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: var(--white);
+        background-color: var(--green);
+        outline: none;
+        @include effect;
+        @include effectBtn;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .special {
+        &__main {
+            grid-template-columns: repeat(2, calc((100% - 30px)/ 2));
+        }
+
+        &__top {
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .special {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__main {
+            grid-template-columns: repeat(1, 100%);
+        }
+
+    }
+  }
